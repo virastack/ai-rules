@@ -1,0 +1,35 @@
+{
+  "name": "kaide",
+  "version": "1.0.7",
+  "description": "AI-native architecture kit for modern React. High-discipline protocols for autonomous agents.",
+  "type": "module",
+  "bin": {
+    "kaide": "./bin/kaide.js"
+  },
+  "keywords": [
+    "kaide",
+    "ai",
+    "react",
+    "architecture",
+    "agent",
+    "cursor",
+    "claude",
+    "windsurf",
+    "github copilot",
+    "nextjs",
+    "tanstack",
+    "typescript",
+    "zod",
+    "cli"
+  ],
+  "author": "Ömer Gülçiçek (https://github.com/omergulcicek)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omergulcicek/kaide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/omergulcicek/kaide/issues"
+  },
+  "homepage": "https://github.com/omergulcicek/kaide#readme"
+}
