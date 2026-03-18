@@ -49,7 +49,7 @@ npx @virastack/ai-rules init
 
 ## License
 
-Licensed under the <a href="https://github.com/virastack/password-toggle/blob/main/LICENSE">MIT License</a>.
+Licensed under the <a href="https://github.com/virastack/ai-rules/blob/main/LICENSE">MIT License</a>.
 
 ## Maintainer
 
