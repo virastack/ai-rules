@@ -1,35 +1,40 @@
 {
-  "name": "kaide",
-  "version": "1.0.7",
+  "name": "@virastack/ai-rules",
+  "version": "1.0.0",
   "description": "AI-native architecture kit for modern React. High-discipline protocols for autonomous agents.",
+  "author": {
+    "name": "Ömer Gülçiçek (ViraStack)",
+    "email": "iletisim@omergulcicek.com",
+    "url": "https://omergulcicek.com"
+  },
+  "license": "MIT",
+  "homepage": "https://virastack.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/virastack/ai-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/virastack/ai-rules/issues"
+  },
   "type": "module",
   "bin": {
     "kaide": "./bin/kaide.js"
   },
   "keywords": [
-    "kaide",
-    "ai",
-    "react",
-    "architecture",
-    "agent",
+    "virastack",
+    "ai-rules",
+    "ai-agents",
+    "cursor-rules",
+    "agent-rules",
+    "mdc",
+    "prompt-engineering",
     "cursor",
     "claude",
-    "windsurf",
-    "github copilot",
     "nextjs",
-    "tanstack",
-    "typescript",
-    "zod",
+    "react",
+    "architecture",
+    "standards",
+    "dx",
     "cli"
-  ],
-  "author": "Ömer Gülçiçek (https://github.com/omergulcicek)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/omergulcicek/kaide.git"
-  },
-  "bugs": {
-    "url": "https://github.com/omergulcicek/kaide/issues"
-  },
-  "homepage": "https://github.com/omergulcicek/kaide#readme"
+  ]
 }
