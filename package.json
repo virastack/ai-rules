@@ -18,7 +18,7 @@
   },
   "type": "module",
   "bin": {
-    "kaide": "./bin/kaide.js"
+    "ai-rules": "./bin/ai-rules.js"
   },
   "keywords": [
     "virastack",

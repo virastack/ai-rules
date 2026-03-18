@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const command = process.argv[2];
 
 if (command !== "init") {
-  console.log("Usage: npx kaide init");
+  console.log("Usage: npx @virastack/ai-rules init");
   process.exit(1);
 }
 
@@ -47,7 +47,7 @@ async function main() {
     await copyDir(templateDir, targetDir);
 
     console.log(`\n${createdCount} created • ${skippedCount} skipped`);
-    console.log("✅ Kaide is ready. Try: Ask AI to plan a new feature.");
+    console.log("✅ ViraStack AI Rules is ready. Try: Ask AI to plan a new feature.");
   } catch (err) {
     console.error("CLI setup failed:", err.message);
     process.exit(1);
