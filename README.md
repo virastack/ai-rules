@@ -47,13 +47,12 @@ npx @virastack/ai-rules init
 
 ... and more at [**virastack.com**](https://virastack.com)
 
----
+## License
 
-<div align="center">
-  <p>Built with precision by <a href="https://omergulcicek.com"><b>Ömer Gülçiçek</b></a></p>
-  <p>
-    <a href="https://github.com/omergulcicek">
-      <img src="https://img.shields.io/github/followers/omergulcicek?label=Follow&style=social" alt="Follow Ömer Gülçiçek" />
-    </a>
-  </p>
-</div>
+Licensed under the <a href="https://github.com/virastack/password-toggle/blob/main/LICENSE">MIT License</a>.
+
+## Maintainer
+
+A project by [**Ömer Gülçiçek**](https://omergulcicek.com)
+
+[![Follow Ömer Gülçiçek](https://img.shields.io/github/followers/omergulcicek?label=Follow&style=social)](https://github.com/omergulcicek)
