@@ -1,18 +1,18 @@
 <div align="center">
-  <img src="./public/hero.jpg" alt="Vira Stack AI" />
+  <img src="./public/ai.jpg" alt="Vira Stack AI" />
 </div>
 
 <br />
 
 <div align="center">
   <a href="https://www.npmjs.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/npm/v/@virastack/ai-rules?style=flat-square&color=black" alt="npm version" />
+    <img src="https://img.shields.io/npm/v/@virastack/ai-rules" alt="npm version" />
   </a>
   <a href="https://www.npmjs.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/npm/dt/@virastack/ai-rules?style=flat-square&color=black" alt="npm downloads" />
+    <img src="https://img.shields.io/npm/dt/@virastack/ai-rules" alt="npm downloads" />
   </a>
   <a href="https://bundlephobia.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/bundlephobia/minzip/@virastack/ai-rules?style=flat-square&color=black" alt="bundle size" />
+    <img src="https://img.shields.io/bundlephobia/minzip/@virastack/ai-rules" alt="bundle size" />
   </a>
 </div>
 
@@ -40,11 +40,20 @@ npx @virastack/ai-rules init
 
 ## Explore the ViraStack Ecosystem
 
-- [**AI Rules**](https://github.com/virastack/ai-rules) – Standardized AI rules for consistent code generation
-- [**Next.js Boilerplate**](https://github.com/virastack/nextjs-boilerplate) – Full-featured, scalable Next.js starter kit
-- [**Input Mask**](https://github.com/virastack/input-mask) – Lightweight, zero-dependency input masking library
-- [**Password Toggle**](https://github.com/virastack/password-toggle) – Accessible, headless password visibility component
-- [**Modern Web in 3 Mins**](https://github.com/virastack/modern-web-in-3-minutes) – Learn the standards of modern web development in 3 minutes.
+### Projects
+
+- [**Next.js Boilerplate**](https://github.com/virastack/nextjs-boilerplate) - Production-ready Next.js 16+ starter template built with Tailwind CSS 4 and TypeScript.
+- [**AI Rules**](https://github.com/virastack/ai-rules) - AI-native architecture kit and high-discipline protocols for modern React applications.
+- [**Input Mask**](https://github.com/virastack/input-mask) - Lightweight, zero-dependency input masking library optimized for React Hook Form.
+- [**Password Toggle**](https://github.com/virastack/password-toggle) - Fully accessible and highly customizable password visibility hook for React.
+- [**Modern Web in 3 Minutes**](https://github.com/virastack/modern-web-in-3-minutes) - Master modern web development standards in just 3 minutes.
+
+### 🚧 Coming Soon
+
+- [**Start (CLI)**](https://github.com/virastack/cli) - Automated scaffolding tool to initialize and scale high-discipline ViraStack architectures.
+- [**TanStack Boilerplate**](https://github.com/virastack/tanstack-boilerplate) - Production-ready TanStack Start starter template built with Tailwind CSS 4 and TypeScript.
+- [**Standards**](https://github.com/virastack/standards) - A unified suite of ESLint, Prettier, and architectural rules to enforce absolute code integrity.
+- [**Error Guard**](https://github.com/virastack/error-guard) - Pro-grade error handling and smart recovery protocols for zero-friction React environments.
 
 ... and more at [**virastack.com**](https://virastack.com)
 
