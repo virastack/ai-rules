@@ -28,7 +28,7 @@ AI-native architecture kit for modern React. High-discipline protocols for auton
 - ⚡ **Performance-First:** Built-in rules for LCP optimization, CLS prevention, and maximum efficiency.
 - 🌐 **LLM Agnostic:** Works seamlessly with Cursor, Windsurf, Claude Code, and other agentic tools.
 
-### [Read the docs →](https://virastack.com/ai)
+### [Read the docs →](https://virastack.com/ai-rules/)
 
 ## Quick Start
 

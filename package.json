@@ -1,6 +1,6 @@
 {
   "name": "@virastack/ai-rules",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "AI-native architecture kit for modern React. High-discipline protocols for autonomous agents.",
   "author": {
     "name": "Ömer Gülçiçek (ViraStack)",
