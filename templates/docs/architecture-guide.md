@@ -14,8 +14,8 @@
 
 Implementation details for Next.js and TanStack Start are strictly segregated. Framework-specific patterns are delegated to their respective .mdc rules.
 
-- **Next.js 16:** See `.cursor/rules/frontend/nextjs.mdc`
-- **TanStack Start:** See `.cursor/rules/frontend/tanstack-start.mdc`
+- **Next.js 16:** See `.cursor/rules/nextjs.mdc`
+- **TanStack Start:** See `.cursor/rules/tanstack-start.mdc`
 
 **Shared Layer:** Reserved strictly for framework-agnostic code (`shared/schemas`, `ui-primitives`).
 
@@ -94,16 +94,16 @@ Rendering strategies (RSC vs Client) and Data Fetching patterns are governed by 
 
 This document is the architectural map. Enforceable laws are located in:
 
+- `Ref: .cursor/rules/api.mdc`
 - `Ref: .cursor/rules/core-principles.mdc`
-- `Ref: .cursor/rules/frontend/api.mdc`
-- `Ref: .cursor/rules/frontend/forms.mdc`
-- `Ref: .cursor/rules/frontend/i18n.mdc`
-- `Ref: .cursor/rules/frontend/nextjs.mdc`
-- `Ref: .cursor/rules/frontend/performance.mdc`
-- `Ref: .cursor/rules/frontend/react-best-practices.mdc`
-- `Ref: .cursor/rules/frontend/state-management.mdc`
-- `Ref: .cursor/rules/frontend/tanstack-query.mdc`
-- `Ref: .cursor/rules/frontend/tanstack-start.mdc`
-- `Ref: .cursor/rules/frontend/testing.mdc`
-- `Ref: .cursor/rules/frontend/typescript.mdc`
-- `Ref: .cursor/rules/frontend/ui-components.mdc`
+- `Ref: .cursor/rules/forms.mdc`
+- `Ref: .cursor/rules/i18n.mdc`
+- `Ref: .cursor/rules/nextjs.mdc`
+- `Ref: .cursor/rules/performance.mdc`
+- `Ref: .cursor/rules/react-best-practices.mdc`
+- `Ref: .cursor/rules/state-management.mdc`
+- `Ref: .cursor/rules/tanstack-query.mdc`
+- `Ref: .cursor/rules/tanstack-start.mdc`
+- `Ref: .cursor/rules/testing.mdc`
+- `Ref: .cursor/rules/typescript.mdc`
+- `Ref: .cursor/rules/ui-components.mdc`

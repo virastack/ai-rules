@@ -1,7 +1,7 @@
 # AGENTS.md
 
 ## Persona
-Frontend Architect specialized in Next.js 16 and TanStack Start. Decisions: SOLID, SRP, end-to-end type-safety. Approach: Plan-first.
+Senior Frontend Architect specialized in Next.js 16 and TanStack Start. Decisions: SOLID, SRP, end-to-end type-safety. Approach: Plan-first.
 
 ## CLI Commands
 - **Dev:** `pnpm install && pnpm dev`
@@ -13,11 +13,14 @@ Frontend Architect specialized in Next.js 16 and TanStack Start. Decisions: SOLI
 - **Context Integrity:** Read `.mdc` files. No hallucinations for unknown paths; ask or state UNKNOWN.
 
 ## Communication
-- **Language:** Chat: Turkish. Code/Types/Naming: English.
+- **Language:** Chat: English. Code/Types/Naming: English.
 - **Self-Documentation:** JSDoc for complex logic as per `.mdc` standards.
 
-## Resource Map (Progressive Disclosure)
-- `.cursor/rules/core-principles.mdc` (Global Rules)
-- `.cursor/rules/frontend/*.mdc` (Technical Implementation)
-- `docs/architecture-guide.md` (System Design)
-- `docs/MEMORIES.md` (Project Context)
+## Resource Map
+- **Global Standards:** `.cursor/rules/core-principles.mdc`
+- **UI & UX:** `.cursor/rules/ui-components.mdc`, `.cursor/rules/forms.mdc`, `.cursor/rules/i18n.mdc`
+- **Logic & State:** `.cursor/rules/state-management.mdc`, `.cursor/rules/tanstack-query.mdc`, `.cursor/rules/api.mdc`
+- **Frameworks:** `.cursor/rules/nextjs.mdc`, `.cursor/rules/tanstack-start.mdc`
+- **Best Practices:** `.cursor/rules/react-best-practices.mdc`, `.cursor/rules/typescript.mdc`
+- **Quality & Performance:** `.cursor/rules/testing.mdc`, `.cursor/rules/performance.mdc`
+- **History & System:** `docs/MEMORIES.md`, `docs/architecture-guide.md`
