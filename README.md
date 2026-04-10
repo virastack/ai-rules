@@ -30,13 +30,30 @@ AI-native architecture kit for modern React. High-discipline protocols for auton
 
 ### [Read the docs →](https://virastack.com/ai-rules/)
 
+## Protocol Coverage
+
+| Protocol | Focus Areas |
+| :--- | :--- |
+| **UI & UX** | Atomic design, A11y SSOT, AI-Aesthetic bans, Skeleton states. |
+| **API Layer** | Zod-validation, SSR Safety, Error normalization, Branded types. |
+| **Performance** | Core Web Vitals targets, Bundle budgets, Image priority. |
+| **State** | Zustand selectors, Hydration safety, TanStack Query integration. |
+| **Frameworks** | Next.js 16 (RSC/Actions) & TanStack Start (Loaders/ServerFn). |
+
 ## Quick Start
 
-Run the CLI to automatically install the configuration files:
+Initialize the elite protocols in your project with a single command:
 
 ```bash
 npx @virastack/ai-rules init
 ```
+
+## How it Works
+
+1. **Install:** Run `npx @virastack/ai-rules init`.
+2. **Context:** The CLI injects specialized `.mdc` files into your `.cursor/rules` directory.
+3. **Reasoning:** Agent (Cursor/Claude) automatically detects these rules based on your file activity.
+4. **Execution:** Your AI assistant starts writing code according to the ViraStack High-Discipline protocols.
 
 ## Explore the ViraStack Ecosystem
 
