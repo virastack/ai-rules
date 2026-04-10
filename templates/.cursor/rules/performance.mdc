@@ -8,14 +8,19 @@ alwaysApply: false
 
 ## Constraints
 
-- **LCP Optimization:** Use `priority` attribute for the first visible `Image` (Next.js) or hero assets.
-- **Image Standards:** Always use `next/image` or framework-specific optimized loaders. Define explicit `width` and `height` to prevent CLS.
-- **Icon Strategy:** Use tree-shakable icons (e.g., `lucide-react`). Forbidden to import entire libraries.
-- **Font Loading:** Use `swap` display strategy. Optimize via `next/font` or local self-hosting.
-- **A11y SSOT:** All interactive elements MUST have `aria-label`, `role`, or associated `<label>`.
-- **Contrast:** Maintain WCAG AA compliance (4.5:1 ratio).
-- **Bundle Size:** Keep feature chunks <50kb. Use dynamic imports for heavy components (charts, editors).
-- **Asset Links:** Ref: `ui-components.mdc` for Skeleton/CLS rules.
+- **Measurement First:** Avoid premature optimization. Identify specific bottlenecks via profiling (DevTools Performance tab) before applying any fixes.
+- **Performance Budgets:**
+    - **Core Web Vitals:** LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1.
+    - **API & Load:** API response time < 200ms (p95). Time to Interactive (TTI) < 3.5s on 4G connections.
+    - **Bundle Size:** Keep initial feature chunks < 50kb. Enforce dynamic imports (`next/dynamic`) for heavy dependencies.
+- **LCP Optimization:** Use the `priority` attribute for the first visible `Image` (Next.js) or hero assets to prioritize loading.
+- **Image & Data Standards:**
+    - Define explicit `width` and `height` to prevent CLS.
+    - Use `<picture>` with `source` tags for complex art direction or resolution switching.
+    - Prevent N+1 query patterns; strictly use pagination or optimized includes/joins for all data-driven components.
+- **Icon & Font Strategy:** Use tree-shakable icons (e.g., `lucide-react`). Apply `swap` display strategy for fonts, optimized via `next/font` or local self-hosting.
+- **A11y SSOT:** All interactive elements MUST have `aria-label`, `role`, or an associated `<label>`. Maintain WCAG AA compliance (4.5:1 contrast ratio).
+- **Asset Links:** Reference `ui-components.mdc` for specific Skeleton and Layout Shift (CLS) implementation rules.
 
 ## Bans
 

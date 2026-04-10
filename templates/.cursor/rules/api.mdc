@@ -8,25 +8,22 @@ alwaysApply: false
 
 ## Constraints
 
-- **Location:** Place all HTTP calls under `features/[feature]/api`.
-- **Validation:** Use Zod for Input/Output validation.
-- **Return Type:** Return typed data, not raw responses.
-- **Error Handling:** Normalize API errors to `AppError` format.
-- **Config:** Load `baseURL` from env. Use a single `axios` instance (`src/lib/api.ts`).
-- **Interceptors:** Manage Auth, locale, and tenant logic in interceptors.
-- **Naming:** `verb-entity.api.ts` (e.g., `get-users.api.ts`). Function: `getUsers`.
-- **SSR Safety:** Use only whitelisted internal URLs or absolute paths for server-to-server calls to prevent SSRF.
+* **Location:** Place all HTTP calls under `features/[feature]/api`.
+* **Validation:** Use Zod for input/output validation when data is external or untrusted. Parse responses before they reach UI or state.
+* **Return Type:** Return typed data, not raw responses.
+* **Error Handling:** Normalize all API errors to a consistent `AppError` format (`code`, `message`) before throwing.
+* **Config:** Load `baseURL` from env. Use a single `axios` instance (`src/lib/api.ts`).
+* **Interceptors:** Handle cross-cutting concerns (auth, headers) via interceptors.
+* **Naming:** `verb-entity.api.ts` (e.g., `get-users.api.ts`). Function: `getUsers`.
+* **SSR Safety:** Use only whitelisted internal URLs or absolute paths for server-to-server calls to prevent SSRF.
 
 ## Bans
 
-- `fetch`/`axios` inside UI components.
-- `axios.create` inside features.
-- Cross-feature API imports.
-- Using untyped responses.
-- Hardcoded endpoint strings in queries.
-- Throwing raw errors.
-- Leaking internal error stack traces to the client or API responses.
-- Constructing dynamic URLs using unsanitized user inputs.
+* **Raw Exposure:** Forbidden to use `fetch`/`axios` or raw API data inside UI components, hooks, or state without validation.
+* **Logic Leaks:** Forbidden to leak internal error stack traces or raw axios/fetch errors to the client.
+* **Security:** Forbidden to construct dynamic URLs using unsanitized user inputs.
+* **Architecture:** No `axios.create` inside features, no cross-feature API imports, no hardcoded endpoint strings in queries.
+
 
 ## Correct Implementation
 
