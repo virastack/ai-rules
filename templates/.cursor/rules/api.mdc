@@ -24,7 +24,6 @@ alwaysApply: false
 * **Security:** Forbidden to construct dynamic URLs using unsanitized user inputs.
 * **Architecture:** No `axios.create` inside features, no cross-feature API imports, no hardcoded endpoint strings in queries.
 
-
 ## Correct Implementation
 
 <example>
