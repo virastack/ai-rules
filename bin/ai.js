@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const command = process.argv[2];
 
 if (command !== "init") {
-  console.log("Usage: npx @virastack/ai-rules init");
+  console.log("Usage: npx @virastack/ai init");
   process.exit(1);
 }
 

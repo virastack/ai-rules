@@ -5,14 +5,14 @@
 <br />
 
 <div align="center">
-  <a href="https://www.npmjs.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/npm/v/@virastack/ai-rules" alt="npm version" />
+  <a href="https://www.npmjs.com/package/@virastack/ai">
+    <img src="https://img.shields.io/npm/v/@virastack/ai" alt="npm version" />
   </a>
-  <a href="https://www.npmjs.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/npm/dt/@virastack/ai-rules" alt="npm downloads" />
+  <a href="https://www.npmjs.com/package/@virastack/ai">
+    <img src="https://img.shields.io/npm/dt/@virastack/ai" alt="npm downloads" />
   </a>
-  <a href="https://bundlephobia.com/package/@virastack/ai-rules">
-    <img src="https://img.shields.io/bundlephobia/minzip/@virastack/ai-rules" alt="bundle size" />
+  <a href="https://bundlephobia.com/package/@virastack/ai">
+    <img src="https://img.shields.io/bundlephobia/minzip/@virastack/ai" alt="bundle size" />
   </a>
 </div>
 
@@ -28,7 +28,7 @@ AI-native architecture kit for modern React. High-discipline protocols for auton
 - ⚡ **Performance-First:** Built-in rules for LCP optimization, CLS prevention, and maximum efficiency.
 - 🌐 **LLM Agnostic:** Works seamlessly with Cursor, Windsurf, Claude Code, and other agentic tools.
 
-### [Read the docs →](https://virastack.com/ai-rules/)
+### [Read the docs →](https://virastack.com/ai/)
 
 ## Protocol Coverage
 
@@ -45,38 +45,23 @@ AI-native architecture kit for modern React. High-discipline protocols for auton
 Initialize the elite protocols in your project with a single command:
 
 ```bash
-npx @virastack/ai-rules init
+npx @virastack/ai init
 ```
 
 ## How it Works
 
-1. **Install:** Run `npx @virastack/ai-rules init`.
+1. **Install:** Run `npx @virastack/ai init`.
 2. **Context:** The CLI injects specialized `.mdc` files into your `.cursor/rules` directory.
 3. **Reasoning:** Agent (Cursor/Claude) automatically detects these rules based on your file activity.
 4. **Execution:** Your AI assistant starts writing code according to the ViraStack High-Discipline protocols.
 
 ## Explore the ViraStack Ecosystem
 
-### Projects
-
-- [**Next.js Boilerplate**](https://github.com/virastack/nextjs-boilerplate) - Production-ready Next.js 16+ starter template built with Tailwind CSS 4 and TypeScript.
-- [**AI Rules**](https://github.com/virastack/ai-rules) - AI-native architecture kit and high-discipline protocols for modern React applications.
-- [**Input Mask**](https://github.com/virastack/input-mask) - Lightweight, zero-dependency input masking library optimized for React Hook Form.
-- [**Password Toggle**](https://github.com/virastack/password-toggle) - Fully accessible and highly customizable password visibility hook for React.
-- [**Modern Web in 3 Minutes**](https://github.com/virastack/modern-web-in-3-minutes) - Master modern web development standards in just 3 minutes.
-
-### 🚧 Coming Soon
-
-- [**Start (CLI)**](https://github.com/virastack/cli) - Automated scaffolding tool to initialize and scale high-discipline ViraStack architectures.
-- [**TanStack Boilerplate**](https://github.com/virastack/tanstack-boilerplate) - Production-ready TanStack Start starter template built with Tailwind CSS 4 and TypeScript.
-- [**Standards**](https://github.com/virastack/standards) - A unified suite of ESLint, Prettier, and architectural rules to enforce absolute code integrity.
-- [**Error Guard**](https://github.com/virastack/error-guard) - Pro-grade error handling and smart recovery protocols for zero-friction React environments.
-
-... and more at [**virastack.com**](https://virastack.com)
+Discover all ViraStack tools, libraries, and boilerplates at [**virastack.com**](https://virastack.com).
 
 ## License
 
-Licensed under the <a href="https://github.com/virastack/ai-rules/blob/main/LICENSE">MIT License</a>.
+Licensed under the <a href="https://github.com/virastack/ai/blob/main/LICENSE">MIT License</a>.
 
 ## Maintainer
 

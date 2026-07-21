@@ -1,6 +1,6 @@
 {
-  "name": "@virastack/ai-rules",
-  "version": "1.1.0",
+  "name": "@virastack/ai",
+  "version": "1.0.0",
   "description": "AI-native architecture kit for modern React. High-discipline protocols for autonomous agents.",
   "author": {
     "name": "Ömer Gülçiçek (ViraStack)",
@@ -11,18 +11,21 @@
   "homepage": "https://virastack.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/virastack/ai-rules.git"
+    "url": "git+https://github.com/virastack/ai.git"
   },
   "bugs": {
-    "url": "https://github.com/virastack/ai-rules/issues"
+    "url": "https://github.com/virastack/ai/issues"
   },
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
-    "ai-rules": "./bin/ai-rules.js"
+    "ai": "./bin/ai.js"
   },
   "keywords": [
     "virastack",
-    "ai-rules",
+    "ai",
     "ai-agents",
     "cursor-rules",
     "agent-rules",
