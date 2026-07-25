@@ -13,7 +13,12 @@ alwaysApply: false
 - **Composition:** Prefer children-based composition over large prop objects.
 - **States:** Implement Skeleton (matching dimensions), EmptyState, and ErrorState for data-driven parts.
 - **UX:** Avoid empty screens; always provide meaningful states.
-- **Styling:** Use Tailwind CSS, `cn()`, and Design Tokens. No Hex/RGB or arbitrary values (use Tailwind scale strictly)
+- **Styling:** Use Tailwind CSS, `cn()`, and Design Tokens. No Hex/RGB or arbitrary values (use Tailwind scale strictly). When writing Tailwind CSS, always use v4 syntax and canonical classes (e.g., use `bg-linear-to-*` instead of `bg-gradient-to-*`, `size-*` instead of `w-* h-*`).
+- **Primitive Components:** Build primitive UI components (Button, Dialog, etc.) in `src/components/ui`.
+  - **CRITICAL CHECK:** Check `package.json` for UI primitives.
+  - If `@radix-ui/*` is installed, use Radix UI primitives.
+  - If `@base-ui/react` is installed, use Base UI primitives.
+  - If neither is installed, build accessible native HTML elements.
 - **A11y:** Enforce semantic HTML, `aria` attributes, and keyboard accessibility.
 - **Exports:** Use Named exports only.
 
@@ -22,6 +27,21 @@ alwaysApply: false
 - **Magic Numbers:** Arbitrary values (e.g., `p-[13px]`); use Tailwind’s spacing scale strictly.
 - **UX/A11y:** `div` soup, "Lorem Ipsum", or `onClick` on non-interactive elements without keyboard support.
 - **Logic:** Default exports or data fetching inside atomic components.
+
+## Mandatory Patterns
+
+### 1. Tailwind Class Merging
+NEVER use dynamic string interpolation (`${class1} ${class2}`) for Tailwind classes. ALWAYS use the `cn()` utility function.
+
+<example>
+import { cn } from "@/lib/utils";
+
+export const Button = ({ className, variant }) => (
+  <button className={cn("base-classes", variant === "primary" && "bg-blue-500", className)}>
+    Click
+  </button>
+);
+</example>
 
 ## Correct Implementation
 

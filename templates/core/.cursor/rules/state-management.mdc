@@ -14,6 +14,9 @@ alwaysApply: false
 - **SSR:** Guarantee client-side rendering with `useHydrated`.
 - **Persistence:** Configure `onRehydrateStorage` when using `persist` middleware.
 - **Server State:** Use TanStack Query. Do not store server data in the global store.
+- **URL State (Pagination, Filters):** Always store shareable state (like pagination, filters, sorting) in the URL search parameters, NOT in the global store.
+  - **CRITICAL CHECK:** First, check `package.json`. If `nuqs` is installed, you MUST use `nuqs` (`useQueryState`, `useQueryStates`) for URL state management.
+  - If `nuqs` is NOT installed, use the framework's native URL search parameter hooks (e.g., `useSearchParams` in Next.js).
 
 ## Bans
 

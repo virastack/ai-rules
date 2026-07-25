@@ -1,6 +1,6 @@
 {
   "name": "@virastack/ai",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "AI-native architecture kit for modern React. High-discipline protocols for autonomous agents.",
   "author": {
     "name": "Ömer Gülçiçek (ViraStack)",
@@ -17,6 +17,11 @@
     "url": "https://github.com/virastack/ai/issues"
   },
   "type": "module",
+  "files": [
+    "bin",
+    "templates",
+    "CHANGELOG.md"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -39,5 +44,11 @@
     "standards",
     "dx",
     "cli"
-  ]
+  ],
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "test": "vitest run"
+  }
 }
