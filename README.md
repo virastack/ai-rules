@@ -1,22 +1,19 @@
-# ViraStack AI
+<div align="center">
 
-<div align="left">
-  <a href="https://www.npmjs.com/package/@virastack/ai">
-    <img src="https://img.shields.io/npm/v/@virastack/ai" alt="npm version" />
-  </a>
-  <a href="https://www.npmjs.com/package/@virastack/ai">
-    <img src="https://img.shields.io/npm/dt/@virastack/ai" alt="npm downloads" />
-  </a>
-  <a href="https://bundlephobia.com/package/@virastack/ai">
-    <img src="https://img.shields.io/bundlephobia/minzip/@virastack/ai" alt="bundle size" />
-  </a>
+![ViraStack AI](https://raw.githubusercontent.com/virastack/ai/main/assets/virastack-ai.png)
+
+*AI-native architecture kit for modern React — disciplined agent rules in one command.*
+
+[![ViraStack AI](https://img.shields.io/badge/ViraStack-AI-%23d946ef)](https://virastack.com/ai)
+[![npm version](https://img.shields.io/npm/v/@virastack/ai)](https://www.npmjs.com/package/@virastack/ai)
+[![npm downloads](https://img.shields.io/npm/dt/@virastack/ai)](https://www.npmjs.com/package/@virastack/ai)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@virastack/ai)](https://bundlephobia.com/package/@virastack/ai)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/virastack/ai/blob/main/LICENSE)
+[![@virastack](https://img.shields.io/badge/-%40virastack-black?logo=x&logoColor=white)](https://x.com/virastack)
+
 </div>
 
-<br />
-
-AI-native architecture kit for modern React. Transforms your LLM (Cursor, Claude Code, Windsurf) into a highly disciplined, specialized Senior Frontend Architect.
-
-Coding agents often hallucinate, write messy code, or mix up frameworks. ViraStack AI prevents this by injecting a strict "constitution" into your project.
+---
 
 ### [Read the full documentation →](https://virastack.com/ai/)
 
@@ -38,13 +35,11 @@ The initialization command safely injects `.mdc` files into your `.cursor/rules`
 
 ## Quick Start
 
-Initialize the elite protocols in your project with a single command:
-
 ```bash
 npx @virastack/ai init
 ```
 
-The CLI will read your `package.json`, detect your stack, and safely inject the necessary `.mdc` rules and `AGENTS.md` into your `.cursor/rules` directory.
+The CLI reads your `package.json`, detects your stack, and injects `.mdc` rules and `AGENTS.md` into `.cursor/rules`.
 
 ### CLI Options
 
