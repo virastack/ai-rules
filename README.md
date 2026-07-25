@@ -7,7 +7,6 @@
 [![ViraStack AI](https://img.shields.io/badge/ViraStack-AI-%23d946ef)](https://virastack.com/ai)
 [![npm version](https://img.shields.io/npm/v/@virastack/ai)](https://www.npmjs.com/package/@virastack/ai)
 [![npm downloads](https://img.shields.io/npm/dt/@virastack/ai)](https://www.npmjs.com/package/@virastack/ai)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/@virastack/ai)](https://bundlephobia.com/package/@virastack/ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/virastack/ai/blob/main/LICENSE)
 [![@virastack](https://img.shields.io/badge/-%40virastack-black?logo=x&logoColor=white)](https://x.com/virastack)
 
@@ -41,7 +40,9 @@ npx @virastack/ai init
 
 The CLI reads your `package.json`, detects your stack, and injects `.mdc` rules and `AGENTS.md` into `.cursor/rules`.
 
-### CLI Options
+**Starting a new project?** [ViraStack Start](https://virastack.com/start/) scaffolds Next.js or TanStack Start with these rules pre-installed.
+
+## Options
 
 | Flag            | Description                                            |
 | :-------------- | :----------------------------------------------------- |
