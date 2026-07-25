@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/virastack/ai/main/assets/virastack-ai.png" alt="ViraStack AI" width="440" style="max-width: 100%;" />
+<img src="https://raw.githubusercontent.com/virastack/ai/main/assets/virastack-ai.png" alt="ViraStack AI" height="120" style="max-width: 100%;" />
 
 *AI-native architecture kit for modern React — disciplined agent rules in one command.*
 
