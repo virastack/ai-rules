@@ -23,9 +23,8 @@ Coding agents often hallucinate, write messy code, or mix up frameworks. ViraSta
 ## Why ViraStack AI?
 
 - **Smart Framework Isolation:** Automatically detects your framework (Next.js or TanStack Start) via `package.json` to inject only the relevant rules and prevent cross-framework hallucinations.
-- **Dependency-Aware Intelligence:** Rules dynamically adapt to your installed packages (e.g., enforces `fetch` vs `axios`, native params vs `nuqs`, base-ui vs Radix).
-- **Multi-Agent Ready:** Ships with unified `AGENTS.md` and `CLAUDE.md` entry points, ensuring Cursor, Claude Code, and Windsurf all follow the exact same architecture.
 - **Strict Feature Boundaries:** Enforces feature-sliced design, blocking cross-feature imports and mandating Zod-first validation at the API edge.
+- **Multi-Agent Ready:** Ships with unified `AGENTS.md` and `CLAUDE.md` entry points, ensuring Cursor, Claude Code, and Windsurf all follow the exact same architecture.
 - **Mandatory Patterns:** Imposes non-negotiable coding standards like TanStack Query `queryOptions` factories, Safe Return Patterns, and strict error normalization (`ApiError`).
 
 ## Injected Rule Coverage
