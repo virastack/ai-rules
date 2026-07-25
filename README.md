@@ -22,10 +22,20 @@ Coding agents often hallucinate, write messy code, or mix up frameworks. ViraSta
 
 ## Why ViraStack AI?
 
-- **Zero Hallucination:** Automatically detects your framework (Next.js or TanStack Start) and loads only the relevant context.
-- **Strict Boundaries:** Enforces separation of concerns (features vs. shared), Zod-first validation, and safe API layers.
-- **Performance First:** Prevents layout shifts, blocks main-thread scripts, and enforces Core Web Vitals best practices.
-- **End-to-End Type Safety:** Demands TypeScript strictness, proper error normalization (`ApiError`), and safe mutation returns.
+- **Smart Framework Isolation:** Automatically detects your framework (Next.js or TanStack Start) via `package.json` to inject only the relevant rules and prevent cross-framework hallucinations.
+- **Dependency-Aware Intelligence:** Rules dynamically adapt to your installed packages (e.g., enforces `fetch` vs `axios`, native params vs `nuqs`, base-ui vs Radix).
+- **Multi-Agent Ready:** Ships with unified `AGENTS.md` and `CLAUDE.md` entry points, ensuring Cursor, Claude Code, and Windsurf all follow the exact same architecture.
+- **Strict Feature Boundaries:** Enforces feature-sliced design, blocking cross-feature imports and mandating Zod-first validation at the API edge.
+- **Mandatory Patterns:** Imposes non-negotiable coding standards like TanStack Query `queryOptions` factories, Safe Return Patterns, and strict error normalization (`ApiError`).
+
+## Injected Rule Coverage
+
+The initialization command safely injects `.mdc` files into your `.cursor/rules` directory, covering:
+
+- **Architecture:** Core Principles, Feature Boundaries, React Best Practices
+- **Data & State:** TanStack Query, Zustand, API & Error Normalization
+- **UI & Performance:** UI Components, Tailwind, Forms, Core Web Vitals
+- **Quality:** TypeScript Strictness, Testing
 
 ## Quick Start
 
