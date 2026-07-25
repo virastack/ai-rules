@@ -50,6 +50,17 @@ The CLI reads your `package.json`, detects your stack, and injects `.mdc` rules 
 | `--framework`   | Explicitly set the framework (`nextjs` or `tanstack`). |
 | `--tr`          | Run the CLI with Turkish prompts and success messages. |
 
+## Explore the ViraStack Ecosystem
+
+Discover all ViraStack tools, libraries, and boilerplates at [**virastack.com**](https://virastack.com).
+
 ## License
 
 Licensed under the [MIT License](https://github.com/virastack/ai/blob/main/LICENSE).
+
+## Maintainer
+
+A project by [**Ömer Gülçiçek**](https://omergulcicek.com)
+
+[![Follow Ömer Gülçiçek](https://img.shields.io/github/followers/omergulcicek?label=Follow&style=social)](https://github.com/omergulcicek)
+
