@@ -62,7 +62,7 @@ function askQuestion(query) {
   return new Promise((resolve) => rl.question(query, resolve));
 }
 
-async function copyDir(src, dest) {
+async function copyDir(src, dest, framework) {
   try {
     const entries = await fs.readdir(src, { withFileTypes: true });
     await fs.mkdir(dest, { recursive: true });
@@ -72,15 +72,39 @@ async function copyDir(src, dest) {
       const destPath = path.join(dest, entry.name);
 
       if (entry.isDirectory()) {
-        await copyDir(srcPath, destPath);
+        await copyDir(srcPath, destPath, framework);
         continue;
+      }
+
+      let fileContent = null;
+      if (entry.name === "AGENTS.md") {
+        fileContent = await fs.readFile(srcPath, "utf-8");
+        fileContent = fileContent.replace(/\{FRAMEWORK_NAME\}/g, framework === "nextjs" ? "Next.js 16" : "TanStack Start");
+        fileContent = fileContent.replace(/\{FRAMEWORK_RULE_FILE\}/g, framework === "nextjs" ? "nextjs.mdc" : "tanstack-start.mdc");
+
+        if (framework === "nextjs") {
+          const nextjsBlock = `<!-- BEGIN:nextjs-agent-rules -->
+
+# This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in \`dist/docs/\` before writing any code. Heed deprecation notices.
+
+<!-- END:nextjs-agent-rules -->
+
+`;
+          fileContent = nextjsBlock + fileContent;
+        }
       }
 
       try {
         await fs.access(destPath);
         // File exists
         if (force || overwriteAll) {
-          await fs.copyFile(srcPath, destPath);
+          if (fileContent !== null) {
+            await fs.writeFile(destPath, fileContent);
+          } else {
+            await fs.copyFile(srcPath, destPath);
+          }
           updatedCount++;
         } else if (!process.stdout.isTTY) {
           // Skip if not in an interactive terminal and no --force flag
@@ -93,7 +117,11 @@ async function copyDir(src, dest) {
 
             if (normalized === "y") {
               overwriteAll = true;
-              await fs.copyFile(srcPath, destPath);
+              if (fileContent !== null) {
+                await fs.writeFile(destPath, fileContent);
+              } else {
+                await fs.copyFile(srcPath, destPath);
+              }
               updatedCount++;
             } else {
               skippedCount++;
@@ -106,7 +134,11 @@ async function copyDir(src, dest) {
       } catch {
         // File does not exist
         await fs.mkdir(path.dirname(destPath), { recursive: true });
-        await fs.copyFile(srcPath, destPath);
+        if (fileContent !== null) {
+          await fs.writeFile(destPath, fileContent);
+        } else {
+          await fs.copyFile(srcPath, destPath);
+        }
         createdCount++;
       }
     }
@@ -122,6 +154,11 @@ async function detectFramework(targetDir) {
     const pkgPath = path.join(targetDir, "package.json");
     const pkgContent = await fs.readFile(pkgPath, "utf-8");
     const pkg = JSON.parse(pkgContent);
+    
+    if (pkg.virastack && pkg.virastack.template) {
+      return pkg.virastack.template;
+    }
+
     const deps = { ...pkg.dependencies, ...pkg.devDependencies };
 
     if (deps["next"]) return "nextjs";
@@ -156,11 +193,11 @@ async function main() {
 
     // 1. Copy core templates
     const coreDir = path.join(templatesDir, "core");
-    await copyDir(coreDir, targetDir);
+    await copyDir(coreDir, targetDir, framework);
 
     // 2. Copy framework specific templates
     const frameworkDir = path.join(templatesDir, framework);
-    await copyDir(frameworkDir, targetDir);
+    await copyDir(frameworkDir, targetDir, framework);
 
     console.log(t.summary(createdCount, updatedCount, skippedCount));
     if (createdCount === 0 && updatedCount === 0) {

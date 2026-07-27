@@ -44,7 +44,7 @@ The initialization command safely injects `.mdc` files into your `.cursor/rules`
 npx @virastack/ai init
 ```
 
-The CLI reads your `package.json`, detects your stack, and injects `.mdc` rules and `AGENTS.md` into `.cursor/rules`.
+The CLI reads your `package.json`, detects your stack, and writes `AGENTS.md`, `CLAUDE.md`, `docs/`, and `.cursor/rules/*.mdc` into your project root.
 
 **Starting a new project?** [ViraStack Start](https://virastack.com/start/) scaffolds Next.js or TanStack Start with these rules pre-installed.
 

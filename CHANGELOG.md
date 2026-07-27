@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.3.0] - 2026-07-24
+## [v1.3.0] - 2026-07-27
 
 ### Added
 - **Framework Isolation**: Complete separation of Core, Next.js, and TanStack Start rules. Agents no longer see cross-framework noise.
@@ -14,6 +14,9 @@
 - **Rule Refinement**: Rules are now shorter, stricter, and purely in English to optimize token usage and agent comprehension.
 - **Performance Rules**: Extracted framework-agnostic performance rules into `core` and moved Next.js specific optimizations (`next/image`, `next/dynamic`, etc.) into `nextjs.mdc` to prevent hallucination in TanStack projects.
 - **TanStack Query Rules**: Moved `tanstack-query.mdc` to `core` so both Next.js and TanStack Start projects benefit from strict query boundaries.
+- **CLAUDE.md**: Simplified to `@AGENTS.md` as the single entry point for Claude Code.
+- **Next.js AGENTS.md**: When the target framework is Next.js, the CLI prepends the official `<!-- BEGIN:nextjs-agent-rules -->` block so scaffolded projects keep Next.js 16 agent guidance alongside ViraStack rules.
+- **Tool compatibility**: `AGENTS.md` table updated to reflect the new `CLAUDE.md` → `@AGENTS.md` flow.
 
 ## [v1.2.2] - 2026-07-24
 

@@ -2,7 +2,7 @@
 
 ## Persona
 
-Senior Frontend Architect specialized in TanStack Start. Decisions: SOLID, SRP, end-to-end type-safety. Approach: Plan-first.
+Senior Frontend Architect specialized in {FRAMEWORK_NAME}. Decisions: SOLID, SRP, end-to-end type-safety. Approach: Plan-first.
 
 ## CLI Commands
 
@@ -25,7 +25,7 @@ Senior Frontend Architect specialized in TanStack Start. Decisions: SOLID, SRP, 
 | Tool             | Entry point               | Rules                                     |
 | :--------------- | :------------------------ | :---------------------------------------- |
 | **Cursor**       | `AGENTS.md`               | `.cursor/rules/*.mdc` (auto-loaded)       |
-| **Claude Code**  | `CLAUDE.md` → `AGENTS.md` | Read `.cursor/rules/*.mdc` before editing |
+| **Claude Code**  | `CLAUDE.md` (`@AGENTS.md`) | Read `.cursor/rules/*.mdc` before editing |
 | **Other agents** | `AGENTS.md`               | Read `.cursor/rules/*.mdc` before editing |
 
 ## Resource Map
@@ -33,7 +33,7 @@ Senior Frontend Architect specialized in TanStack Start. Decisions: SOLID, SRP, 
 - **Global Standards:** `.cursor/rules/core-principles.mdc`
 - **UI & UX:** `.cursor/rules/ui-components.mdc`, `.cursor/rules/forms.mdc`, `.cursor/rules/i18n.mdc`
 - **Logic & State:** `.cursor/rules/state-management.mdc`, `.cursor/rules/tanstack-query.mdc`, `.cursor/rules/api.mdc`
-- **Frameworks:** `.cursor/rules/tanstack-start.mdc`
+- **Frameworks:** `.cursor/rules/{FRAMEWORK_RULE_FILE}`
 - **Best Practices:** `.cursor/rules/react-best-practices.mdc`, `.cursor/rules/typescript.mdc`
 - **Quality & Performance:** `.cursor/rules/testing.mdc`, `.cursor/rules/performance.mdc`
 - **History & System:** `docs/MEMORIES.md`, `docs/architecture-guide.md`
