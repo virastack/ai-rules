@@ -1,5 +1,17 @@
 # Changelog
 
+## [v1.3.1] - 2026-07-28
+
+### Added
+- **Enterprise Error Handling:** Updated `api.mdc` error semantics from `message, status, data` to the industry standard `code, message, details` structure to improve i18n and frontend logic routing.
+- **Contract First:** Enforced "Contract First" architecture in `api.mdc`.
+- **Branded Types & Discriminated Unions:** Added strict, type-safe state management and ID conventions to `typescript.mdc` to eliminate ID mix-ups and unsafe `any` usages.
+- **Keep or Revert Principle:** Added a strict performance rule to `performance.mdc`: any unmeasurable AI optimization must be reverted to prevent code pollution.
+- **Optimistic Updates Standard:** Added a zero-fault, standardized `onMutate`, `onError`, `onSettled` optimistic update template to `tanstack-query.mdc`.
+
+### Changed
+- **Unbounded Data Fetching:** Added strict rules against unbounded queries (N+1, lack of pagination) in `api.mdc`.
+
 ## [v1.3.0] - 2026-07-27
 
 ### Added

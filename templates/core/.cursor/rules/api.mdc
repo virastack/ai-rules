@@ -11,7 +11,9 @@ alwaysApply: false
 * **Location:** Place all HTTP calls under `features/[feature]/api`.
 * **Validation:** Use Zod for input/output validation when data is external or untrusted. Parse responses before they reach UI or state.
 * **Return Type:** Return typed data, not raw responses.
-* **Error Handling:** Normalize HTTP failures to a consistent `ApiError` (`message`, `status`, `data`) before throwing.
+* **Contract First:** ALWAYS define TypeScript/Zod contracts before writing the implementation. Every public behavior is a commitment.
+* **Error Handling:** Normalize HTTP failures to a consistent `ApiError` (`code`, `message`, `details`) before throwing.
+* **Pagination & Limits:** Unbounded data fetching is FORBIDDEN. Always enforce pagination or limits on list requests.
 * **HTTP Client Strategy:**
   - **CRITICAL CHECK:** Check `package.json` to determine the project's HTTP client.
   - **Default (ViraStack):** Prefer a centralized native `fetch` wrapper (e.g., `src/lib/api.ts`) when `axios` is not installed.
@@ -46,7 +48,7 @@ ALWAYS catch raw HTTP errors and throw a standardized `ApiError` before it reach
 <example>
 if (!res.ok) {
   const errorData = await res.json();
-  throw new ApiError(errorData.message || "Fetch failed", res.status, errorData);
+  throw new ApiError(errorData.code || "UNKNOWN", errorData.message || "Fetch failed", errorData.details);
 }
 </example>
 

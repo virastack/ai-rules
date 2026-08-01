@@ -20,7 +20,7 @@
 
 ---
 
-### [Read the full documentation →](https://virastack.com/ai/)
+### [See how it works →](https://virastack.com/ai/)
 
 ## Why ViraStack AI?
 

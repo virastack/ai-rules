@@ -39,6 +39,37 @@ export const userQueryOptions = (id: string) => queryOptions({
 const { data } = useQuery(userQueryOptions(id));
 </example>
 
+### 2. Optimistic Updates
+ALWAYS use the standard optimistic update pattern for mutations to ensure a snappy UI.
+
+<example>
+export const useToggleTask = () => {
+  const queryClient = useQueryClient();
+
+  return useMutation({
+    mutationFn: (taskId: string) => api.patch(`/tasks/${taskId}`),
+    onMutate: async (taskId) => {
+      await queryClient.cancelQueries({ queryKey: taskKeys.all });
+      const previousTasks = queryClient.getQueryData<Task[]>(taskKeys.all);
+      
+      queryClient.setQueryData<Task[]>(taskKeys.all, (old) => 
+        old?.map((t) => t.id === taskId ? { ...t, done: !t.done } : t)
+      );
+      
+      return { previousTasks };
+    },
+    onError: (err, taskId, context) => {
+      if (context?.previousTasks) {
+        queryClient.setQueryData(taskKeys.all, context.previousTasks);
+      }
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: taskKeys.all });
+    }
+  });
+};
+</example>
+
 ## Correct Implementation
 
 <example>

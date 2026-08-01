@@ -9,6 +9,8 @@ alwaysApply: false
 ## Constraints
 
 - **Measurement First:** Avoid premature optimization. Identify specific bottlenecks via profiling (DevTools Performance tab) before applying any fixes.
+- **Keep or Revert:** If an optimization (`useMemo`, `useCallback`, lazy loading) does not show a measurable improvement, REVERT IT. Neutral changes add maintenance burden.
+- **Log Attempts:** Document failed performance attempts to prevent re-applying the same ineffective optimizations.
 - **Performance Budgets:**
     - **Core Web Vitals:** LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1.
     - **API & Load:** API response time < 200ms (p95). Time to Interactive (TTI) < 3.5s on 4G connections.

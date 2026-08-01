@@ -15,6 +15,9 @@ alwaysApply: false
 - **Immutability:** Use `readonly` or `as const`.
 - **Return Types:** Explicitly define return types for exported functions.
 - **Generics:** Use constraints (`T extends object`).
+- **Branded Types:** Use branded types for IDs to prevent mix-ups (e.g., `type TaskId = string & { readonly __brand: 'TaskId' }`).
+- **Discriminated Unions:** Use discriminated unions for managing variant states.
+- **Prefer Addition:** Avoid breaking changes; extend interfaces with optional fields rather than modifying or deleting existing ones.
 
 ## Bans
 
@@ -30,8 +33,18 @@ alwaysApply: false
 
 <example>
 ```ts
+// Zod & Types
 const UserSchema = z.object({ id: z.string() });
 type User = z.infer<typeof UserSchema>;
+
+// Branded Types
+type UserId = string & { readonly __brand: 'UserId' };
+
+// Discriminated Unions
+type TaskState = 
+  | { status: 'pending' }
+  | { status: 'completed'; completedAt: Date }
+  | { status: 'failed'; errorReason: string };
 ```
 </example>
 
