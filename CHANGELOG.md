@@ -1,5 +1,16 @@
 # Changelog
 
+## [v1.3.2] - 2026-08-06
+
+### Added
+- **UI Delivery Checklist:** `ui-components.mdc` now requires keyboard, focus, responsive checks, states, and token checks before UI work is marked done.
+- **Focus & Typography Rules:** Overlay focus management and heading hierarchy constraints in `ui-components.mdc`.
+
+### Changed
+- **Responsive QA:** Aligned viewport checks with Tailwind defaults (`320` base, `sm` 640, `md` 768, `lg` 1024, `xl` 1280) instead of framework-agnostic widths.
+- **Performance Ownership:** `performance.mdc` keeps CWV/assets/CLS; defers interaction/responsive delivery checks to `ui-components.mdc`.
+- **Testing Clarity:** `testing.mdc` prefers accessible RTL queries and explicitly keeps Playwright/E2E optional unless already in the project.
+
 ## [v1.3.1] - 2026-07-28
 
 ### Added

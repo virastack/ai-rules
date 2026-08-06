@@ -20,6 +20,9 @@ alwaysApply: false
   - If `@base-ui/react` is installed, use Base UI primitives.
   - If neither is installed, build accessible native HTML elements.
 - **A11y:** Enforce semantic HTML, `aria` attributes, and keyboard accessibility.
+- **Typography:** One `h1` per page. Do not skip heading levels. Do not use heading styles for non-heading content.
+- **Responsive:** Mobile-first from 320px. Use and verify at Tailwind defaults: sm 640, md 768, lg 1024, xl 1280.
+- **Focus:** Overlays/dialogs must move focus inside on open and restore it on close. Prefer Radix/Base UI primitives for focus trap; never invent a custom trap when a primitive is available.
 - **Exports:** Use Named exports only.
 
 ## Bans
@@ -27,6 +30,15 @@ alwaysApply: false
 - **Magic Numbers:** Arbitrary values (e.g., `p-[13px]`); use Tailwind’s spacing scale strictly.
 - **UX/A11y:** `div` soup, "Lorem Ipsum", or `onClick` on non-interactive elements without keyboard support.
 - **Logic:** Default exports or data fetching inside atomic components.
+
+## Delivery Checklist
+Before marking UI work done, confirm all of the following:
+- Interactive elements are reachable and operable via keyboard (Tab / Enter / Space / Escape where applicable).
+- Focus is visible; dialogs/sheets manage focus correctly.
+- Loading, empty, and error states exist for data-driven UI.
+- Spacing, color, and typography use design tokens / Tailwind scale (no raw hex or arbitrary values).
+- Layout holds at 320px and Tailwind defaults: sm 640, md 768, lg 1024, xl 1280.
+- No console errors or a11y anti-patterns introduced (`div` buttons, missing labels, color-only state).
 
 ## Mandatory Patterns
 

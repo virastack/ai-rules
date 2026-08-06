@@ -21,8 +21,9 @@ alwaysApply: false
     - Use `<picture>` with `source` tags for complex art direction or resolution switching.
     - Prevent N+1 query patterns; strictly use pagination or optimized includes/joins for all data-driven components.
 - **Icon & Font Strategy:** Use tree-shakable icons (e.g., `lucide-react`). Apply `swap` display strategy for fonts.
-- **A11y SSOT:** All interactive elements MUST have `aria-label`, `role`, or an associated `<label>`. Maintain WCAG AA compliance (4.5:1 contrast ratio).
-- **Asset Links:** Reference `ui-components.mdc` for specific Skeleton and Layout Shift (CLS) implementation rules.
+- **A11y SSOT:** All interactive elements MUST have `aria-label`, `role`, or an associated `<label>`. Maintain WCAG AA compliance (4.5:1 contrast ratio). Color alone must never convey state — pair with text, icons, or patterns.
+- **UI Delivery:** Interaction, focus, responsive breakpoints, and state completeness are enforced in `ui-components.mdc` (Delivery Checklist). This file owns budgets, assets, and CLS/LCP.
+- **Asset Links:** Reference `ui-components.mdc` for Skeleton, focus, and layout implementation rules.
 
 ## Bans
 
